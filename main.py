@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Загрузка данных
 df = pd.read_csv("data/sales.csv")
@@ -49,3 +50,16 @@ print("\nPrice statistics:")
 print("Mean price:", mean_price)
 print("Median price:", median_price)
 print("Standard deviation:", std_price)
+
+# Визуализация
+revenue_by_category.plot(kind="bar", title="Revenue by Category")
+plt.xlabel("Category")
+plt.ylabel("Revenue")
+plt.tight_layout()
+plt.show()
+
+top_products.head(5).plot(kind="bar", title="Top 5 Products by Quantity Sold")
+plt.xlabel("Product")
+plt.ylabel("Quantity Sold")
+plt.tight_layout()
+plt.show()
