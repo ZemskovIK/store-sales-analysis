@@ -63,3 +63,7 @@ plt.xlabel("Product")
 plt.ylabel("Quantity Sold")
 plt.tight_layout()
 plt.show()
+
+# Сохранение очищенных данных
+df.to_csv("data/cleaned_sales.csv", index=False)
+print("\nCleaned data saved to data/cleaned_sales.csv")
