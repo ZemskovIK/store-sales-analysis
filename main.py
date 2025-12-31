@@ -52,17 +52,23 @@ print("Median price:", median_price)
 print("Standard deviation:", std_price)
 
 # Визуализация
+plt.figure()
 revenue_by_category.plot(kind="bar", title="Revenue by Category")
 plt.xlabel("Category")
 plt.ylabel("Revenue")
 plt.tight_layout()
-plt.show()
+plt.savefig("plots/revenue_by_category.png")
+plt.close()
 
+plt.figure()
 top_products.head(5).plot(kind="bar", title="Top 5 Products by Quantity Sold")
 plt.xlabel("Product")
 plt.ylabel("Quantity Sold")
 plt.tight_layout()
-plt.show()
+plt.savefig("plots/top_5_products.png")
+plt.close()
+
+print("\nTwo plots saved to plots/")
 
 # Сохранение очищенных данных
 df.to_csv("data/cleaned_sales.csv", index=False)
