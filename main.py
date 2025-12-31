@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # Загрузка данных
 df = pd.read_csv("data/sales.csv")
@@ -38,3 +39,13 @@ print("\nRevenue by category:")
 print(revenue_by_category)
 print("\nTop products by quantity sold:")
 print(top_products)
+
+# Статистический анализ с помощью NumPy
+mean_price = np.mean(df["price"])
+median_price = np.median(df["price"])
+std_price = np.std(df["price"])
+
+print("\nPrice statistics:")
+print("Mean price:", mean_price)
+print("Median price:", median_price)
+print("Standard deviation:", std_price)
